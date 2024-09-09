@@ -1,0 +1,16 @@
+.main-container {
+  background-color: #666666;
+
+}
+
+.video-container {
+  width: 100%; /* Video takes up the full width of the container */
+  height: 100%; /* Video takes up the full height of the container */
+  object-fit: fill;
+  
+}
+
+.compvid {
+  width: 100%; /* Video takes up the full width of the container */
+  height: 100%; /* Video takes up the full height of the container */
+}
