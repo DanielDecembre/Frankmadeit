@@ -8,7 +8,7 @@ function Nav() {
       <div className="navbar">
         <ul className="list">
           <li>
-            <a href="Films">films</a>
+            <a href="Film">films</a>
           </li>
           <li>
             

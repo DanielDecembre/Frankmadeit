@@ -47,7 +47,7 @@ const ComingSoonPage = () => {
 
   return (
     <div className="coming-soon-page">
-       <img src='/FRANKblanc.png' alt="Logo" className="logo" />
+       <img src='/FRANKblanc.png' alt="Logo" className="logo"  />
       <div className="content">
         <h1 className="title">COMING SOON</h1>
         <p className="subtitle">Films by Frank</p>
