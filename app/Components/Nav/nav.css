@@ -4,6 +4,7 @@
     align-items: center;
     font-family: "Courier New", Courier, monospace;
     background: #666666;
+    z-index: 1;
     
   }
   .list {
