@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState, useMemo, useCallback } from 'react';
 import './film.css';
-import Link from 'next/link';
+
 
 const ComingSoonPage = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -48,9 +48,7 @@ const ComingSoonPage = () => {
 
   return (
     <div className="coming-soon-page">
-      <Link href="/">
-  <img src='/FRANKblanc.png' alt="Logo" className="logo" style={{cursor: 'pointer'}} />
-</Link>
+   
       <div className="content">
         <h1 className="title">COMING SOON</h1>
         <p className="subtitle">Films by Frank</p>

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import "./test.css";
 import { useState } from 'react';
 import Image from 'next/image';
-import { Client, Environment } from "square";
+
 
 // Define the LearnMoreModal component
 const LearnMoreModal = () => {
@@ -15,10 +15,7 @@ const LearnMoreModal = () => {
     setIsOpen(!isOpen);
   };
 
-  const squareClient = new Client({
-    accessToken: process.env.SQUARE_ACCESS_TOKEN,
-    environment: Environment.Sandbox, // Change to Environment.Production for live
-});
+
 
   return (
     <>
