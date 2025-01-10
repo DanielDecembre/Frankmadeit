@@ -5,12 +5,12 @@ import "./test.css";
 import { useState } from 'react';
 import Image from 'next/image';
 
+import { MouseEvent } from 'react';
 
-// Define the LearnMoreModal component
 const LearnMoreModal = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleModal = (e) => {
+  const toggleModal = (e: MouseEvent<HTMLElement>) => {
     e.preventDefault();
     setIsOpen(!isOpen);
   };
