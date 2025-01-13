@@ -90,7 +90,7 @@ export default function Home() {
         </div>
       </div>
       <video className="home-video" autoPlay loop muted>
-        <source src="/go-with.mp4" type="video/mp4" />
+        <source src="/ezyZip.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
