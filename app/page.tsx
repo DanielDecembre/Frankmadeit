@@ -1,11 +1,11 @@
 'use client'
 
-import "./page.css";
 import Image from "next/image";
 import Link from "next/link";
 import { FaInstagram } from 'react-icons/fa'
 import { FaTiktok } from 'react-icons/fa'
 import Head from "next/head";
+import "./page.css";
 
 
 export default function Home() {
