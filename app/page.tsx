@@ -89,7 +89,7 @@ export default function Home() {
           <p> © 2023 Frank - All rights reserved.™ </p>
         </div>
       </div>
-      <video className="home-video" autoPlay loop muted>
+      <video className="home-video" autoPlay loop muted playsInline >
         <source src="https://frankmadeit.s3.us-east-2.amazonaws.com/ezyZip.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
