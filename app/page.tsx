@@ -90,7 +90,7 @@ export default function Home() {
         </div>
       </div>
       <video className="home-video" autoPlay loop muted>
-        <source src="/ezyZip.mp4" type="video/mp4" />
+        <source src="https://frankmadeit.s3.us-east-2.amazonaws.com/ezyZip.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
