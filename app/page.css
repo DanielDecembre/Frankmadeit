@@ -35,7 +35,7 @@
     gap: 1rem;                     /* Space between each flex item */
     font-family: 'Courier New', Courier, monospace;
     position: absolute;               /* Ensures it stays in the same position even when scrolling */
-    top: 0;
+    top: 20px;
     left: 0;
     z-index: 2;
     padding: 10px 20px;
