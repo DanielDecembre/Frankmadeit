@@ -4,43 +4,28 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaInstagram } from 'react-icons/fa'
 import { FaTiktok } from 'react-icons/fa'
-
 import "./page.css";
-import { useEffect, useState, ReactNode } from 'react';
+import { useState } from 'react';
 
 
 
-interface FadeInTextProps {
-  children: ReactNode;
-  delay?: number;
-}
-
-const FadeInText = ({ children, delay = 0 }: FadeInTextProps) => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, delay);
-
-    return () => clearTimeout(timer);
-  }, [delay]);
-
-  return (
-    <div
-      className={`transition-opacity duration-1000 ease-in ${
-        isVisible ? 'opacity-100' : 'opacity-0'
-      }`}
-    >
-      {children}
-    </div>
-  );
+const products = {
+  product1: {
+    image: "/There-once-was.png",
+    description: "Product 1 is an amazing item that elevates any setting.",
+  },
+  product2: {
+    image: "/There-once-was.png",
+    description: "Product 2 stands out with its stunning design.",
+  },
+  product3: {
+    image: "/There-once-was.png",
+    description: "Product 3 combines functionality and elegance.",
+  },
 };
 
-
-
-
 export default function Home() {
+  const [selectedProduct, setSelectedProduct] = useState("product1");
   return (
     <>
 
@@ -91,6 +76,38 @@ export default function Home() {
       </video>
 
     </div>
+    <section className="ProductPage">
+    <div className="pageSelector">
+    <select onChange={(e) => setSelectedProduct(e.target.value)} className="dropdown">
+            <option value="product1"> Matchbox </option>
+            <option value="product2"> Nimbus </option>
+            <option value="product3"> Couch </option>
+          </select>
+    </div>
+    <div className="productContent">
+      <div className="imageContainer">
+        <Image
+         src={products[selectedProduct].image}
+         alt={selectedProduct}
+         width={300}
+         height={300}/>
+      </div>
+      <div className="productDescription">
+        {products[selectedProduct].description}
+      </div>
+      <div className="productFooter">
+      <a href ="https://www.instagram.com/ffrank.usa/">
+        <FaInstagram/>
+        </a>
+        <a href ="https://www.tiktok.com/@frank__madeit">
+        <FaTiktok/>
+        </a>
+      </div>
+      <div className="trademark2">
+          <p> © 2023 Frank - All rights reserved.™ </p>
+      </div>
+    </div>
+    </section>
     </>
   );
 }

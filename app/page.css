@@ -77,6 +77,7 @@
   z-index: 1;
   max-width: 80%;
   font-family: 'Courier New', Courier, monospace;
+  padding-left: 50px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -150,4 +151,63 @@
   opacity: 0;
   animation: fadeIn 1s ease-in forwards;
   animation-delay: 3s;
+}
+
+.ProductPage {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageSelector {
+  margin-bottom: 100px; /* Adjust margin as needed */
+}
+
+.productContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Space between image and description */
+  align-items: center;
+  width: 80%; /* Adjust width to control layout */
+  height: auto;
+  gap: 300px;
+}
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: left; /* Center image horizontally */
+  align-items: center; /* Center image vertically */
+  max-width: 300px; /* Adjust as needed */
+}
+
+.productDescription {
+  flex: 1;
+  text-align: left; /* Align text to the left */
+  padding: 20px; /* Add spacing around the description */
+}
+
+
+.productFooter {
+  position: absolute;
+  bottom: 20px; /* Adjust distance from the bottom as needed */
+  left: 20px; /* Adjust distance from the left as needed */
+  display: flex;
+  flex-direction: row;
+  gap: 15px; /* Space between the icons */
+}
+
+.trademark2 {
+  position: absolute;
+  bottom: 20px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 0.8rem; /* Adjust font size as needed */
+  color: #666; /* Adjust color as needed */
 }
