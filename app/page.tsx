@@ -144,9 +144,7 @@ export default function Home() {
         <div className="object_container">
       
 <div className="objectbtn">
-  {btnText.split('').map((char, index) => (
-    <span key={index} style={{ opacity: 0 }}>{char}</span>
-  ))}
+Creating distinct atmospheres one object at a time.
 </div>
 
         </div>
