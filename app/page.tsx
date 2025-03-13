@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaInstagram, FaTiktok } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
-import { gsap } from 'gsap'; 
+
 import "./page.css";
 
 
@@ -82,34 +82,7 @@ export default function Home() {
   const lastText = "Elevating everyday experiences";
 
   // GSAP animation
-  useEffect(() => {
-    const sloganSpans = document.querySelectorAll('.objectslogan span');
-    const btnSpans = document.querySelectorAll('.objectbtn span');
-    const lastSpans = document.querySelectorAll('.objectlast span');
-
-    gsap.to(sloganSpans, {
-      opacity: 1,
-      duration: 0,
-      stagger: 0.1,
-      delay: 1,
-    });
-
-    const sloganDuration = sloganSpans.length * 0.1;
-    gsap.to(btnSpans, {
-      opacity: 1,
-      duration: 0,
-      stagger: 0.1,
-      delay: 1 ,
-    });
-
-    const btnDuration = btnSpans.length * 0.1;
-    gsap.to(lastSpans, {
-      opacity: 1,
-      duration: 0,
-      stagger: 0.1,
-      delay: 1 + sloganDuration + btnDuration,
-    });
-  }, []);
+ 
 
   // Dynamic product selection handler
   const handleProductChange = (productKey: string) => {
