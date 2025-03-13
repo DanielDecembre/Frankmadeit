@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaInstagram, FaTiktok } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
-import { gsap } from 'gsap'; // Import GSAP
+import { gsap } from 'gsap'; 
 import "./page.css";
 
 
@@ -13,9 +13,8 @@ interface ProductDetails {
   [key: string]: {
     name: string;
     images: string[];
-    description: string;
+    description: string[];
     price: number;
-    colors: string[];
     features: string[];
   };
 }
@@ -30,8 +29,7 @@ const productDetails: ProductDetails = {
       "/Dimensions.png"
      
     ],
-    description: [ 
-      "An elegant reimagination of a matchbox that marries precision industrial design with functional materiality,",
+    description: [ "An elegant reimagination of a matchbox that marries precision industrial design with functional materiality,",
       "transforming a utilitarian object into a sophisticated hospitality accessory that elevates the ritual of fire and ambiance.",
     ],
     price: 44,
@@ -47,9 +45,9 @@ const productDetails: ProductDetails = {
       "/alternate-nimbus-1.png",
       "/alternate-nimbus-2.png"
     ],
-    description: "Product 2 stands out with its stunning design.",
+    description: [ "Product 2 stands out with its stunning design."],
     price: 79.99,
-    colors: ['White', 'Gray'],
+   
     features: [
       "Innovative design",
       "Multiple use cases",
@@ -63,9 +61,9 @@ const productDetails: ProductDetails = {
       "/alternate-couch-1.png",
       "/alternate-couch-2.png"
     ],
-    description: "Product 3 combines functionality and elegance.",
+    description: [ "Product 3 combines functionality and elegance."],
     price: 599.99,
-    colors: ['Beige', 'Dark Gray'],
+  
     features: [
       "Luxurious comfort",
       "Durable construction",
@@ -147,8 +145,9 @@ export default function Home() {
         throw new Error('No checkout URL received');
       }
     } catch (error) {
-      console.error('Checkout error:', error.message);
-      alert(`Unable to initiate checkout: ${error.message}. Please try again.`);
+      console.error('Checkout error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
+      alert(`Unable to initiate checkout: ${errorMessage}. Please try again.`);
     }
   };
 
