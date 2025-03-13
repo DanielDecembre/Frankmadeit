@@ -7,6 +7,10 @@
   }
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 .main_container {
   position: relative;
   height: 100vh;
@@ -75,7 +79,8 @@
   color: white;
   text-align: center;
   z-index: 1;
-  max-width: 80%;
+  width: 80vw;
+  max-width: 100%;
   font-family: 'Courier New', Courier, monospace;
   padding-left: 50px;
 }
@@ -100,23 +105,18 @@
 }
 
 .objectslogan {
-  display: flex;
-  justify-content: center;
-  font-size: 1.0rem;
-  margin-bottom: 3rem;
   opacity: 0;
   animation: fadeIn 1s ease-in forwards;
-  animation-delay: 1s;
+  animation-delay: 2s;
+  margin-bottom: 50px;
 }
 
 .objectbtn {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  margin-bottom: 2rem;
   opacity: 0;
   animation: fadeIn 1s ease-in forwards;
-  animation-delay: 1.5s;
+  animation-delay: 2s;
+  margin-bottom: 50px;
+  font-size: 1.25em;
 }
 
 /* Added fade-in for the last text div */
@@ -155,42 +155,83 @@
 
 .ProductPage {
   position: relative;
-  height: 100vh;
-  width: 100%;
+  height: 150vh;
+  width: 100vw;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; /* Changed from center to flex-start */
   align-items: center;
+  background: linear-gradient(to bottom, #000000, #808080, #000000);
 }
 
-.pageSelector {
-  margin-bottom: 100px; /* Adjust margin as needed */
-}
-
-.productContent {
+.product-header {
+  position: absolute; /* or position: fixed if you want it to stay on scroll */
+  top: 15vh; /* Changed from top: 10 */
+  width: 100%; /* Ensure it spans full width */
   display: flex;
-  flex-direction: row;
-  justify-content: space-between; /* Space between image and description */
-  align-items: center;
-  width: 80%; /* Adjust width to control layout */
-  height: auto;
-  gap: 300px;
+  justify-content: center; /* Center the banner horizontally */
+  padding: 10px 10px; /* Optional: adds some vertical padding */
+
 }
+
+.Banner {
+  color: white; /* Make text visible */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 5.5rem; /* Adjust size as needed */
+  color:#808080;
+  padding: 40px, 10px;
+}
+
+.product-content {
+  display:flex;
+  flex-direction: row;
+  gap: 120px;
+}
+
 
 .imageContainer {
-  flex: 1;
-  display: flex;
-  justify-content: left; /* Center image horizontally */
-  align-items: center; /* Center image vertically */
-  max-width: 300px; /* Adjust as needed */
+display: flex;
+flex-direction: column;
+gap: 30px;
+ /* Already has a shadow */
+}
+
+.main-product-image {
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+}
+
+.image-thumbnails {
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+
 }
 
 .productDescription {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
   text-align: left; /* Align text to the left */
-  padding: 20px; /* Add spacing around the description */
+  height: 25vh;
+  width: 70vh;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  gap:20px;
+  
 }
+
+.productDescription h2 {
+  font-size: 1.75em;
+}
+
+.buy-now-button {
+  margin-top: 30px;
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+  width: 150px;
+ margin-left: 170px;
+ border-radius: 5px;
+ cursor: pointer;
+}
+
+
 
 
 .productFooter {
@@ -200,11 +241,12 @@
   display: flex;
   flex-direction: row;
   gap: 15px; /* Space between the icons */
+  color: #666;
 }
 
 .trademark2 {
   position: absolute;
-  bottom: 20px; /* Adjust as needed */
+  bottom: 10px; /* Adjust as needed */
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
