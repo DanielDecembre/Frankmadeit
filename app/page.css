@@ -253,3 +253,99 @@ gap: 30px;
   font-size: 0.8rem; /* Adjust font size as needed */
   color: #666; /* Adjust color as needed */
 }
+
+@media screen and (max-width: 1024px) {
+  .productContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .productContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Banner {
+    font-size: 2.5em;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .Banner {
+    font-size: 2.5em;
+    margin-top: -100px;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .product-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .productDescription {
+    font-size: 1em;
+    width: 70vw;
+    height: 20vh;
+   margin-top: 50px;
+   gap: 15px;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .productDescription h2 {
+    font-size: 1.5em;
+    margin-bottom: -30px;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .imageContainer {
+   width: 80vw;
+   height: 40vh;
+   display: flex;
+   flex-direction: row;
+   gap: 5px;
+   margin-top: -390px;
+   margin-left: -20px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .image-thumbnails {
+    width: 50vw;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main-product-image{
+    width: 60vw;
+    height: 50vh;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .buy-now-button {
+  display: flex;
+  flex-direction: column;
+  margin-left: 60px;
+  margin-top: -10px;
+  }
+}
