@@ -168,13 +168,13 @@ Creating distinct atmospheres one object at a time.
           <div className="navbar">
             <div className="header-L">
               <div className="left-title"> NSR BOX</div>
-              <div className="title-def"> 'nasrat/</div>
+              <div className="title-def"> &#39;nasrat&#47;</div>
 
             </div>
             </div>
 
             <div className="center-title">
-                  - Story -
+            &#45; Story &#45;
             </div>
 
          
