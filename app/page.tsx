@@ -152,12 +152,7 @@ Creating distinct atmospheres one object at a time.
       <div className="footer">
 
       <div className="socials">
-        <a href ="https://www.instagram.com/ffrank.usa/">
-        <FaInstagram/>
-        </a>
-        <a href ="https://www.tiktok.com/@frank__madeit">
-        <FaTiktok/>
-        </a>
+      
 
       </div>
         
@@ -166,8 +161,58 @@ Creating distinct atmospheres one object at a time.
         <source src="https://frankmadeit.s3.us-east-2.amazonaws.com/ezyZip.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+      </div>
 
-    </div>
+      <section className="Ourstory">
+        <div className="story-header-container">
+          <div className="navbar">
+            <div className="header-L">
+              <div className="left-title"> NSR BOX</div>
+              <div className="title-def"> &#39;nasrat&#47;</div>
+
+            </div>
+            </div>
+
+            <div className="center-title">
+            &#45; Story &#45;
+            </div>
+
+         
+        </div>
+        <div className="story-body">
+          <div className="story-body-container">
+            <Image
+            src="/fire.png"
+            alt="fire"
+            width={440}
+            height={470}
+            className="fire-image"/>
+
+            <div className="story-description">
+              <p className="context">
+              The word NSR or fire had been mentioned in
+              ancient Egyptian texts in different fonus.
+              The discovery of fire was considered as the
+              first step toward civilzation. Revolutionizing
+              many aspects of life including how we gather.
+              </p>
+            </div>
+
+          </div>
+          <div className="story-footer-container">
+            <Image
+            src="/NSR-logo.png"
+            alt=""
+            width={100}
+            height={140}
+            className="brand-logo"/>
+
+          </div>
+
+        </div>
+
+      </section>
+
       <section className="ProductPage">
         <div className="product-header">
           <div className="Banner">
@@ -233,6 +278,7 @@ Creating distinct atmospheres one object at a time.
           <div className="trademark2">
             <p>© 2023 Frank - All rights reserved.™</p>
           </div>
+          
       </section>
     </>
   );
