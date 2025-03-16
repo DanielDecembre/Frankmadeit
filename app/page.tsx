@@ -4,10 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaInstagram, FaTiktok } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
-
 import "./page.css";
-
-
 
 interface ProductDetails {
   [key: string]: {
@@ -21,77 +18,33 @@ interface ProductDetails {
 
 const productDetails: ProductDetails = {
   matchbox: {
-    name: "  NSR BOX",
+    name: "NSR BOX",
     images: [
       "/product.jpeg",
       "/mueseum.jpeg",
       "/Functional Callouts.png",
       "/Dimensions.png"
-     
     ],
-    description: [ "An elegant reimagination of a matchbox that marries precision industrial design with functional materiality,",
-      "transforming a utilitarian object into a sophisticated hospitality accessory that elevates the ritual of fire and ambiance.",
+    description: [
+      "An elegant reimagination of a matchbox that marries precision industrial design with functional materiality,",
+      "transforming a utilitarian object into a sophisticated hospitality accessory that elevates the ritual of fire and ambiance."
     ],
     price: 44,
     features: [
-      "Comes with 90 refillable strike anywhere matches" ,
+      "Comes with 90 refillable strike anywhere matches",
       "Unlike traditional strike pads, this box maintains its form, giving it a never ending functionality."
     ],
-  },
-  nimbus: {
-    name: "Nimbus",
-    images: [
-      "/There-once-was.png",
-      "/alternate-nimbus-1.png",
-      "/alternate-nimbus-2.png"
-    ],
-    description: [ "Product 2 stands out with its stunning design."],
-    price: 79.99,
-   
-    features: [
-      "Innovative design",
-      "Multiple use cases",
-      "High-end craftsmanship"
-    ]
-  },
-  couch: {
-    name: "Couch",
-    images: [
-      "/There-once-was.png",
-      "/alternate-couch-1.png",
-      "/alternate-couch-2.png"
-    ],
-    description: [ "Product 3 combines functionality and elegance."],
-    price: 599.99,
-  
-    features: [
-      "Luxurious comfort",
-      "Durable construction",
-      "Modern aesthetic"
-    ]
   }
 };
 
 export default function Home() {
-  const [selectedProduct, setSelectedProduct] = useState<string>('matchbox');
-  const [currentImage, setCurrentImage] = useState(0)
+  const [currentImage, setCurrentImage] = useState(0);
+  const currentProduct = productDetails['matchbox'];
 
-  // Define text constants for typing animation
   const slogan = "Objects Designed for Hospitality";
   const btnText = "Creating distinct atmospheres one object at a time.";
   const lastText = "Elevating everyday experiences";
 
-  // GSAP animation
- 
-
-  // Dynamic product selection handler
-  const handleProductChange = (productKey: string) => {
-    setSelectedProduct(productKey);
-    setCurrentImage(0);
-    
-  };
-
-  // Buy now handler with error tracking
   const handleBuyNow = async () => {
     try {
       const response = await fetch('/api/square-checkout', {
@@ -124,8 +77,6 @@ export default function Home() {
     }
   };
 
-  const currentProduct = productDetails[selectedProduct];
-
   return (
     <>
       <div className="main_container">
@@ -142,20 +93,13 @@ export default function Home() {
       </svg>
       </Link>
         <div className="object_container">
-      
-<div className="objectbtn">
-Creating distinct atmospheres one object at a time.
-</div>
-
+          <div className="objectbtn">
+            Creating distinct atmospheres one object at a time.
+          </div>
         </div>
       </div>
       <div className="footer">
-
-      <div className="socials">
-      
-
-      </div>
-        
+        <div className="socials"></div>
       </div>
       <video className="home-video" autoPlay loop muted playsInline >
         <source src="https://frankmadeit.s3.us-east-2.amazonaws.com/ezyZip.mp4" type="video/mp4" />
@@ -167,118 +111,114 @@ Creating distinct atmospheres one object at a time.
         <div className="story-header-container">
           <div className="navbar">
             <div className="header-L">
-              <div className="left-title"> NSR BOX</div>
-              <div className="title-def"> &#39;nasrat&#47;</div>
-
+              <div className="left-title">
+                <Image
+                  src="/NSR-logo.png"
+                  alt=""
+                  width={95}
+                  height={140}
+                  className="brand-logo"/>
+              </div>
             </div>
+          </div>
+          <div className="navbar2">
+          <Link href="/">Home</Link>
+          <div onClick={() => document.getElementById('purchase-section')?.scrollIntoView({ behavior: 'smooth' })}>
+            Shop
             </div>
-
-            <div className="center-title">
-            &#45; Story &#45;
-            </div>
-
-         
+          </div>
+          <div className="center-title">
+            - NSR MATCHBOX -
+          </div>
         </div>
+        
         <div className="story-body">
           <div className="story-body-container">
             <Image
-            src="/fire.png"
-            alt="fire"
-            width={440}
-            height={470}
-            className="fire-image"/>
-
+              src="/Artboard 17_2.png"
+              alt="fire"
+              width={400}
+              height={500}
+              className="fire-image"/>
             <div className="story-description">
+              <h2> Origin - </h2>
               <p className="context">
-              The word NSR or fire had been mentioned in
-              ancient Egyptian texts in different fonus.
-              The discovery of fire was considered as the
-              first step toward civilzation. Revolutionizing
-              many aspects of life including how we gather.
+                The word NSR or fire had been mentioned in
+                ancient Egyptian texts in different fonus.
+                The discovery of fire was considered as the
+                first step toward civilzation. Revolutionizing
+                many aspects of life including how we gather.
               </p>
             </div>
-
           </div>
-          <div className="story-footer-container">
-            <Image
-            src="/NSR-logo.png"
-            alt=""
-            width={100}
-            height={140}
-            className="brand-logo"/>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      <section className="ProductPage">
-        <div className="product-header">
-          <div className="Banner">
-              NSR BOX
-             </div>
-        </div>
-
-        <div className="product-content">
-       <div className="imageContainer">
-            <Image
-              key={currentProduct.images[currentImage]}
-              src={currentProduct.images[currentImage]}
-              alt={`${currentProduct.name}`}
-              width={380}
-              height={380}
-              priority
-              className="main-product-image"
-           />
-            <div className="image-thumbnails">
-              {currentProduct.images.map((img, index) => (
-                <Image
-                  key={img}
-                  src={img}
-                  alt={`Thumbnail ${index + 1}`}
-                  width={95}
-                  height={80}
-                  onClick={() => setCurrentImage(index)}
-                  className={`thumbnail ${currentImage === index ? 'active-thumbnail' : ''}`}
-                />
-              ))}
+          <div className="gallery-section">
+            <div className="description">
+            <p className="function-description1">
+              Reduced CO2 emissions:
+              Recycled PETG significantly reduce CO2 emissions.
+              Releases 56% less CO2 compared to pure PETG.
+            </p>
+            <p className="function-description2">
+              Durability:
+              Carbon fiber PETG is strong and durable, leading to
+              longer-lasting products and potentially less waste
+              </p>
+              </div>
+            <div className="functionality">
+              <Image
+                src="/Functional Callouts.png"
+                alt="fire"
+                width={460}
+                height={490}
+                className="functional-image"/>
             </div>
           </div>
-          <div className="productDescription">
-            <h2>{currentProduct.name}</h2>
-            <p className="price">${currentProduct.price.toFixed(2)}</p>
-            <div className="inspire">
-              {currentProduct.description}
+          <div className="Purchase-page">
+            <div className="purchase-left">
+              <Image
+                src="/mueseum.png"
+                alt="fire"
+                width={460}
+                height={490}
+                className="mueseum-image"/>
+              <div className="p-image-description">
+                <p className="bullet-1">
+                  2025 
+                </p>
+              </div>
             </div>
-            
-            <ul className="product-features">
-              {currentProduct.features.map((feature, index) => (
-                <li key={index}>{feature}</li>
-              ))}
-            </ul>
-
-            <button 
-              onClick={handleBuyNow}
-              className="buy-now-button"
-            >
-              Buy Now - ${currentProduct.price.toFixed(2)}
-            </button>
+            <div className="purchase-right" id="purchase-section">
+              <div className="right-title">
+                <h2>NSR Matchbox</h2>
+              </div>
+              <div className="right-price">
+                <h3>&#36;44.00</h3>
+              </div>
+              <p className="right-description">
+                An elegant reimagination of a matchbox that marries precision industrial design with functional materiality, transforming a utilitarian object into a sophisticated hospitality accessory that elevates the ritual of fire and ambiance.
+              </p>
+              <ul className="right-list">
+                <li>Comes with 90 refillable strike anywhere matches</li>
+                <li>Unlike traditional strike pads, this box maintains its form, giving it a never ending functionality.</li>
+              </ul>
+              <button onClick={handleBuyNow} className="right-purchase">
+                Buy Now
+              </button>
+            </div>
           </div>
-          </div>
-       
-        <div className="productFooter">
-            <a href="https://www.instagram.com/ffrank.usa/">
-              <FaInstagram/>
-            </a>
-            <a href="https://www.tiktok.com/@frank__madeit">
-              <FaTiktok/>
-            </a>
-          </div>
-          <div className="trademark2">
-            <p>© 2023 Frank - All rights reserved.™</p>
-          </div>
-          
+          <div className="productFooter">
+          <a href="https://www.instagram.com/ffrank.usa/">
+            <FaInstagram/>
+          </a>
+          <a href="https://www.tiktok.com/@frank__madeit">
+            <FaTiktok/>
+          </a>
+        </div>
+        <div className="trademark2">
+          <p>© 2023 Frank - All rights reserved.™</p>
+        </div>
+        </div>
+        
       </section>
     </>
   );
