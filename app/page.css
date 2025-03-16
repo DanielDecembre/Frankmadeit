@@ -156,7 +156,7 @@
 @media screen and (max-width: 768px) {
   .center-title {
     font-size: 1.5em;
-    padding-left: 18%;
+    padding-left: 23%;
   }
 }
 
@@ -313,6 +313,13 @@ margin-bottom: 10%;
   width: 10vw;
 margin-left: 40%;
 }
+
+@media screen and (max-width: 768px) {
+.right-purchase{
+  width: 19vw;
+}
+}
+
 
 .productFooter{
   color: #000000;
