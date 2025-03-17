@@ -135,7 +135,7 @@ export default function Home() {
         <div className="story-body">
           <div className="story-body-container">
             <Image
-              src="/Artboard 17_2.png"
+              src="/productflagship.png"
               alt="fire"
               width={400}
               height={500}
