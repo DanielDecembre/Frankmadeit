@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaInstagram, FaTiktok } from 'react-icons/fa';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import "./page.css";
 
 interface ProductDetails {
@@ -93,8 +93,8 @@ export default function Home() {
       </svg>
       </Link>
         <div className="object_container">
-          <div className="objectbtn">
-            Creating distinct atmospheres one object at a time.
+          <div className="object_btn_container">
+            <div className="object_btn_text">{btnText}</div>
           </div>
         </div>
       </div>
@@ -192,7 +192,7 @@ export default function Home() {
                 <h2>NSR Matchbox</h2>
               </div>
               <div className="right-price">
-                <h3>&#36;44.00</h3>
+                <h3>$44.00</h3>
               </div>
               <p className="right-description">
                 An elegant reimagination of a matchbox that marries precision industrial design with functional materiality, transforming a utilitarian object into a sophisticated hospitality accessory that elevates the ritual of fire and ambiance.
