@@ -3,6 +3,16 @@
   to { opacity: 1; }
 }
 
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+}
+
 * {
   scroll-behavior: smooth;
   box-sizing: border-box;
@@ -81,12 +91,24 @@
   padding-left: 50px;
 }
 
-.objectbtn {
-  opacity: 0;
-  animation: fadeIn 1s ease-in forwards;
-  animation-delay: 2s;
+.object_btn_container {
+  position: relative;
+  display: inline-block;
+}
+
+.object_btn_text {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid white; /* Matches text color */
+  animation: 
+    typing 2s steps(44, end) forwards,
+    blink 0.7s step-end infinite;
   margin-bottom: 20px;
   font-size: 1em;
+}
+
+.footer {
+  /* Assuming this is intentional even though socials is inside */
 }
 
 .socials {
@@ -111,11 +133,30 @@
   align-items: center;
 }
 
+.story-header-container {
+  width: 100%; /* Ensure it spans full width for centering */
+}
+
 .navbar {
   display: flex;
   flex-direction: row;
   width: 100vw;
   padding: 10px 20px;
+}
+
+.header-L {
+  /* Left header styling */
+}
+
+.left-title {
+  /* Left title styling */
+}
+
+.brand-logo {
+  opacity: 0.14;
+  box-shadow: 0 6px 10px -2px rgba(0, 0, 0, 0.2);
+  max-width: 95px;
+  height: auto;
 }
 
 .navbar2 {
@@ -130,23 +171,20 @@
   font-size: clamp(0.8em, 2vw, 1em);
 }
 
-.brand-logo {
-  opacity: 0.14;
-  box-shadow: 0 6px 10px -2px rgba(0, 0, 0, 0.2);
-  max-width: 95px;
-  height: auto;
-}
-
 .center-title {
   color: #000000;
   font-size: 2.5em;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: 500;
   margin-bottom: 50px;
-  padding-left: 36%;
+  text-align: center; /* Center the text */
+  width: 100%; /* Ensure it takes full width */
 }
 
-/* Story Body Container */
+.story-body {
+  /* Container styling */
+}
+
 .story-body-container {
   display: flex;
   flex-direction: row;
@@ -194,6 +232,10 @@
   margin-bottom: 5vw;
 }
 
+.functionality {
+  /* Container styling */
+}
+
 .functional-image {
   border-radius: 5px;
   width: 460px; /* Original JSX size */
@@ -217,19 +259,16 @@
   font-weight: 500;
 }
 
-.bullet-1 {
-  color: black;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-weight: 600;
-  font-style: italic;
-}
-
 /* Purchase Page */
 .Purchase-page {
   display: flex;
   flex-direction: row;
   width: 83vw;
   gap: 50px;
+}
+
+.purchase-left {
+  /* Left side styling */
 }
 
 .mueseum-image {
@@ -239,6 +278,17 @@
   height: 490px; /* Original JSX size */
   max-width: 100%; /* For responsiveness */
   height: auto; /* Maintain aspect ratio */
+}
+
+.p-image-description {
+  /* Description styling */
+}
+
+.bullet-1 {
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 600;
+  font-style: italic;
 }
 
 .purchase-right {
@@ -258,11 +308,12 @@
 }
 
 .right-purchase {
-  width: 9vw;
-  margin-left: 40%;
+  max-width: 120px; /* Set a reasonable max-width */
+  margin: 0 auto; /* Center horizontally */
   border-radius: 5px;
   box-shadow: 0 6px 10px -2px rgba(0, 0, 0, 0.2);
   padding: 10px;
+  text-align: center; /* Ensure text inside is centered */
 }
 
 .productFooter {
@@ -292,7 +343,7 @@
 
   .center-title {
     font-size: 1.5em;
-    padding-left: 25%;
+    text-align: center; /* Maintain centering */
   }
 
   .story-body-container,
@@ -336,7 +387,8 @@
   }
 
   .right-purchase {
-    width: 19vw;
+    max-width: 120px; /* Maintain consistent width */
+    margin: 0 auto; /* Keep centered */
   }
 
   .trademark2 {
@@ -356,13 +408,13 @@
     top: 50px;
   }
 
-  .objectbtn {
+  .object_btn_text {
     font-size: 0.8em;
   }
 
   .center-title {
     font-size: 1.2em;
-    padding-left: 10%;
+    text-align: center; /* Maintain centering */
   }
 
   .fire-image,
@@ -374,7 +426,8 @@
   }
 
   .right-purchase {
-    width: 50vw;
+    max-width: 120px; /* Maintain consistent width */
+    margin: 0 auto; /* Keep centered */
   }
 }
 
