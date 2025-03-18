@@ -94,7 +94,7 @@ export default function Home() {
       </Link>
         <div className="object_container">
           <div className="object_btn_container">
-            <div className="object_btn_text">{btnText}</div>
+            <div className="object_btn_text"> Creating distinct atmospheres one object at a time.</div>
           </div>
         </div>
       </div>
