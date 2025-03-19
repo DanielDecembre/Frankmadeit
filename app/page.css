@@ -178,14 +178,14 @@
 }
 
 .story-body {
-  /* Container styling */
+  width: 85vw;
 }
 
 .story-body-container {
   display: flex;
   flex-direction: row;
-  width: 87vw;
-  gap: 50px;
+  width: 90vw;
+  gap: 70px;
 }
 
 .fire-image {
@@ -221,7 +221,7 @@
 
 /* Gallery Section */
 .gallery-section {
-  width: 70vw;
+  width: 80vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -229,7 +229,7 @@
 }
 
 .functionality {
-  /* Container styling */
+ 
 }
 
 .functional-image {
@@ -260,7 +260,7 @@
   display: flex;
   flex-direction: row;
   width: 83vw;
-  gap: 50px;
+  gap: 70px;
 }
 
 .purchase-left {
