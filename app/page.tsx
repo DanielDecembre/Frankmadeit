@@ -42,7 +42,7 @@ export default function Home() {
   const currentProduct = productDetails['matchbox'];
 
   const slogan = "Objects Designed for Hospitality";
-  const btnText = "Creating distinct atmospheres one object at a time.";
+
   const lastText = "Elevating everyday experiences";
 
   const handleBuyNow = async () => {
