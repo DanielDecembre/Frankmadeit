@@ -100,16 +100,12 @@
   overflow: hidden;
   white-space: nowrap;
   border-right: 2px solid white; /* Matches text color */
-  animation: 
-    typing 2s steps(44, end) forwards,
-    blink 0.7s step-end infinite;
+  animation: blink 0.7s step-end infinite;
   margin-bottom: 20px;
   font-size: 1em;
 }
 
-.footer {
-  /* Assuming this is intentional even though socials is inside */
-}
+
 
 .socials {
   position: absolute;
@@ -188,7 +184,7 @@
 .story-body-container {
   display: flex;
   flex-direction: row;
-  width: 80vw;
+  width: 87vw;
   gap: 50px;
 }
 
