@@ -15,7 +15,7 @@ This also Contains a [SquareSDK](https://Square.com).
 
 All content is stored in Amazons [AWS S3](https://aws.amazon.com/s3/).
 
-## Deploy on Vercel
+## Description
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
