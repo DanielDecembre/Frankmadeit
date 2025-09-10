@@ -8,7 +8,11 @@ View the deployed site here :
 ## Under the Hood
 
 This A [Next.js](https://nextjs.org) Web App hosted on [Vercel](https://vercel.com). 
+
+
 This also Contains a [SquareSDK](https://Square.com). 
+
+
 All content is stored in Amazons [AWS S3](https://aws.amazon.com/s3/).
 
 ## Deploy on Vercel
